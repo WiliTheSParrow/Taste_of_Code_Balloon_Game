@@ -3,13 +3,12 @@
 <head>
     <title>Balloon Game</title>
     <style>
+
         body {
             /* background: linear-gradient(to bottom, #f9ca24, #22a6b3, #7ed6df); */
             background-attachment: fixed;
-            background-image: url(
-                "http://1.bp.blogspot.com/-ZuiEaHr5gXY/UAIb9XUH-cI/AAAAAAAAAJg/Pu0snieXso8/s1600/pixel+field.png"
-            )
-
+            background-image: url("http://1.bp.blogspot.com/-ZuiEaHr5gXY/UAIb9XUH-cI/AAAAAAAAAJg/Pu0snieXso8/s1600/pixel+field.png"
+                )
         }
 
         .balloon {
@@ -49,7 +48,7 @@
             border-radius: 50%;
             box-shadow: 1px 1px 100px yellow;
             text-shadow: 1px 1px 10px black;
-            color: #130f40;
+            color: #30336b;
         }
     </style>
 
@@ -65,6 +64,64 @@
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="/main.js"></script>
+<script>
+var balloon = $(".balloon");
+var counter = 0;
+var colors = ["#f6e58d", "#eb4d4b", "#ffbe76", "#ff7979", "#badc58", "#dff9fb", "#e056fd", "#686de0"];
+
+for (var i = 0; i < 10; i++) {
+
+    var balloonCopy = balloon.clone();
+    balloonCopy.appendTo("body");
+    var balloon_color
+
+    balloonCopy.css({
+        left: i * 200
+    })
+
+
+    inflatable = balloonCopy.find(".inflatable");
+    string = balloonCopy.find(".string");
+
+    balloon_color = colors[Math.floor(Math.random() * colors.length)];
+    balloon_width = Math.max(20, Math.floor(Math.random() * 90) + 1);
+    balloon_height = 1.2 * balloon_width;
+
+    inflatable.css({
+        "background-color": balloon_color,
+        height: balloon_height,
+        width: balloon_width,
+        "border-radius": balloon_width + "px / " + balloon_height + "px"
+    });
+    string.css({
+        "margin-left": (0.5 * balloon_width),
+        height: (0.5 * balloon_height)
+    });
+
+    balloonCopy.css({
+        left: '50%',
+        bottom: 0
+    });
+
+    balloonCopy.click(function () {
+        $(this).remove();
+        counter = counter + 100 - balloon_width;
+        $(".counter").html(counter);
+    });
+
+    var xdiff = Math.floor(Math.random() * 100);
+    balloonCopy.show();
+
+    balloonCopy.animate({
+        bottom: '100%',
+        left: xdiff + "%"
+    }, (8000 - balloon_width * 10));
+};
+
+balloon.remove();
+
+
+
+</script>
 
 </html>
