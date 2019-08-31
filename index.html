@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Balloon Game</title>
+    <style>
+        body {
+            /* background: linear-gradient(to bottom, #f9ca24, #22a6b3, #7ed6df); */
+            background-attachment: fixed;
+            background-image: url(
+                "http://1.bp.blogspot.com/-ZuiEaHr5gXY/UAIb9XUH-cI/AAAAAAAAAJg/Pu0snieXso8/s1600/pixel+field.png"
+            )
+
+        }
+
+        .balloon {
+            margin: 20px;
+            position: absolute;
+            bottom: 0;
+
+
+        }
+
+        .inflatable {
+            width: 180px;
+            height: 200px;
+            background-color: #ffeaa7;
+            border-radius: 50%;
+
+        }
+
+        .string {
+            width: 1px;
+            height: 100px;
+            background-color: black;
+            margin-left: 90px;
+            transform: rotate(20deg);
+            margin-left: 70px;
+        }
+
+        .counter {
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f6e58d;
+            border-radius: 50%;
+            box-shadow: 1px 1px 100px yellow;
+            text-shadow: 1px 1px 10px black;
+            color: #130f40;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="counter">0</div>
+    <div class="balloon">
+        <div class="inflatable"></div>
+        <div class="string"></div>
+    </div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/main.js"></script>
+
+</html>
