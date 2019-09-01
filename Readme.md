@@ -1,6 +1,6 @@
-# TasteOfCode Beginner Coding Workshop by Codaisseur - Balloon Game
-<img src="#" height="30%" align="right">
-> Taste of Code is an immersive one-day beginner coding workshop with the aim to get more people involved in code, by impressing upon it's importance in today's world.
+# #TasteOfCode Beginner Coding Workshop by Codaisseur - Balloon Shooting Game 🎈
+
+>Taste of Code is an immersive one-day beginner coding workshop with the aim to get more people involved in code, by impressing upon it's importance in today's world.
  
 
 ## Table of contents
